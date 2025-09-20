@@ -9,20 +9,23 @@
   <h1>Area richieste</h1>
   <p>Seleziona il modulo giusto e compila i campi.</p>
 
-  <section>
-    <h2>Supporto Wiki</h2>
-    <div id="zammad_form_supporto"></div>
-    <script src="https://tuo-zammad.tld/assets/form/form.js"></script>
-    <script>
-      $(function() {
-        $('#zammad_form_supporto').ZammadForm({
-          messageTitle: 'Modulo Supporto Wiki',
-          messageSubmit: 'Invia richiesta',
-          // puoi aggiungere campi personalizzati qui
-        });
-      });
-    </script>
-  </section>
+<button id="zammad-feedback-form">Feedback</button>
 
+<script id="zammad_form_script" src="https://support.hermannthierry.it/assets/form/form.js"></script>
+
+<script>
+$(function() {
+  $('#zammad-feedback-form').ZammadForm({
+    messageTitle: 'Traduzioni',
+    messageSubmit: 'Invia',
+    messageThankYou: 'Ti ringraziamo per la tua richiesta (#%s)! Saremo presto sul suo ticket. Potrebbe volerci alcuni giorni',
+    debug: true,
+    showTitle: true,
+    modal: true,
+    noCSS: true,
+    attachmentSupport: true
+  });
+});
+</script>
 </body>
 </html>
