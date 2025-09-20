@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-<title>My site</title>
+  <meta charset="UTF-8">
+  <title>Modulo richieste</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+<body>
+  <h1>Area richieste</h1>
+  <p>Seleziona il modulo giusto e compila i campi.</p>
 
-  <body>
-      <h1>Work in progress </h1>
-  </body>
+  <section>
+    <h2>Supporto Wiki</h2>
+    <div id="zammad_form_supporto"></div>
+    <script src="https://tuo-zammad.tld/assets/form/form.js"></script>
+    <script>
+      $(function() {
+        $('#zammad_form_supporto').ZammadForm({
+          messageTitle: 'Modulo Supporto Wiki',
+          messageSubmit: 'Invia richiesta',
+          // puoi aggiungere campi personalizzati qui
+        });
+      });
+    </script>
+  </section>
 
+</body>
 </html>
